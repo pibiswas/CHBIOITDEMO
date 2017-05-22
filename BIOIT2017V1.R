@@ -1,7 +1,7 @@
 # Logistic Regression Model
 
 # Importing the dataset
-dataset = read.delim('C:\\users\\pibiswas\\Desktop\\current work\\bio-it\\rstudio\\BioIT2017_data254OV_SvR_v1.tsv')
+dataset = read.delim('/home/chdemo/BIO-ITdemo/BioIT2017_data254OV_SvR_v1.tsv')
 
 dataset = dataset[2:52]
 names(dataset) = sub(" ", ".", names(dataset))
@@ -31,3 +31,4 @@ y_pred = ifelse(prob_pred > 0.5, 1, 0)
 
 # Making the Confusion Matrix
 cm = table(test_set[, 1], y_pred > 0.5)
+
