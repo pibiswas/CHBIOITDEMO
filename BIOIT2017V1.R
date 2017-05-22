@@ -1,9 +1,11 @@
 # Logistic Regression Model
 
 # Importing the dataset
-dataset = read.delim('/home/chdemo/BIO-ITdemo/BioIT2017_data254OV_SvR_v1.tsv')
+#dataset = read.delim('/home/chdemo/BIO-ITdemo/BioIT2017_data254OV_SvR_v1.tsv')
 
-dataset = dataset[2:52]
+
+dataset = BioIT2017_data254OV_SvR_v1[2:52]
+
 names(dataset) = sub(" ", ".", names(dataset))
 
 # Encoding categorical data, encoding the target feature as a factor
@@ -31,4 +33,5 @@ y_pred = ifelse(prob_pred > 0.5, 1, 0)
 
 # Making the Confusion Matrix
 cm = table(test_set[, 1], y_pred > 0.5)
+
 
