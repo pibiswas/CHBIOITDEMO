@@ -35,3 +35,6 @@ y_pred = ifelse(prob_pred > 0.5, 1, 0)
 cm = table(test_set[, 1], y_pred > 0.5)
 
 
+plot(classifier)
+plot(prob_pred)
+plot(y_pred)
