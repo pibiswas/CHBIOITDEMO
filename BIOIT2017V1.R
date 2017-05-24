@@ -1,7 +1,7 @@
 # Logistic Regression Model
 
 # Importing the dataset
-OVdata = read.delim('BioIT2017_data254OV_SvR_v1.tsv')
+OVdata = BioIT2017_data254OV_SvR_v1
 
 OVdata = OVdata[2:52]
 names(OVdata) = sub(" ", ".", names(OVdata))
@@ -10,7 +10,7 @@ names(OVdata) = sub(" ", ".", names(OVdata))
 OVdata$Platinum.Status = factor(OVdata$Platinum.Status, levels = c('Sensitive', 'Resistant'), labels = c(0, 1))
 
 # Splitting the dataset into the Training set and Test set
-
+#install.packages("caret",dependencies = TRUE)
 library(caret)
 
 # Scale features
